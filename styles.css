@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+
+div{
+    margin: 10% auto;;
+}
+
+button{
+    margin: 1.2em;
+    width: 6em;
+    height: 2em;
+    border: 1px solid white;
+    border-radius: 0.5em; 
+    background: black;
+    color: white;
+}
+
+button:hover{
+    background: tomato;
+    color: white;
+}
+
+button:focus{
+    outline: none
+}
