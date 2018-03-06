@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BMI checker</title>
 </head>
+
 <body>
-    <div>
-        <h1>BMI calculator</h1>
-        <p>Insert Your Age</p>
-        <input type="text" id="age" value="23">
-        <p>Insert Weight in Kg</p>
-        <input type="text" id="weight">
-        <br>
-        <p>Insert Height in cm</p>
-        <input type="text" id="height">
-        <br>
-        <button id="calc">BMI</button>
-        <p id="result"></p>
+    <div class="header">
+        <div class="wrapper">
+            <h1>BMI calculator</h1>
+            <p>Insert Your Age</p>
+            <input type="text" id="age" value="23">
+            <p>Insert Weight in Kg</p>
+            <input type="text" id="weight">
+            <br>
+            <p>Insert Height in cm</p>
+            <input type="text" id="height">
+            <br>
+            <button id="calc">check</button>
+            <p id="result"></p>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
