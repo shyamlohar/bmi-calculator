@@ -8,13 +8,14 @@ body{
 .header{
     text-align: center;
     margin-top: 4em;
-    background: red;
     width: 50%;
     height: 23rem;;
     box-sizing: border-box;
     background: white;
     display: inline-block;
     box-shadow: 1px -1px 16px -2px rgba(0,0,0,0.99);
+    /* transition: all 2s; */
+    overflow: hidden;
 }
 
 h1{
@@ -22,30 +23,6 @@ h1{
     margin-top: 0;
     line-height: 3.5em;
     color: white;
-}
-
-button{
-    margin: 1.2em;
-    width: 6em;
-    height: 2em;
-    border-style: hidden;
-    background: #00c853;
-    color: white;
-    margin-top: 1.6rem;
-    position: relative; 
-    overflow: hidden;
-    transition: all 0.8s;
-}
-
-button:hover{
-    background: #00b248;
-    color: white;
-    outline: hidden;
-}
-
-button:focus{
-    background: #00b248;
-    outline: none;
 }
 
 input[type=text]{
@@ -61,4 +38,55 @@ input[type=text]:focus{
     height: 1.9rem;
     width: 9.5rem;
     outline: none;
+}
+
+button{
+    margin: 1.2em;
+    width: 6em;
+    height: 2em;
+    border-style: hidden;
+    background: #00c853;
+    color: white;
+    margin-top: 1.6rem;
+    position: relative; 
+    /* overflow: hidden; */
+    transition: all 0.8s;
+    transform: perspective(1px);
+    perspective: 10px;
+    perspective-origin: center;
+}
+
+button:hover{
+    background: #00b248;
+    color: white;
+    outline: hidden;
+}
+
+button:focus{
+    background: #00b248;
+    outline: none;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 40%;
+    /* z-index: -1; */
+    background: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s;
+}
+
+button:focus::before{
+    transform: scale(25);
+    opacity: 1;
+}
+
+h3{
+    margin-top:15em;
 }
